@@ -18,10 +18,21 @@
       </span>
       <p>
         <%= tweet.body %>
+        <a><strong>@<%= tweet.user.name %></strong> </a>
+
       </p>
     </div>
 
     <% end %>
   </div>
+  <div>
+  <% if user_signed_in?  %>
+  <% current_user.email %>
+    <a><%= link_to 'Log out', destroy_user_session_path, method: :delete, style: "color: black;" %></a>
 
+  <% end %>
+  </div>
+  <div>
+    <a><%=link_to "Update password", edit_user_registration_path%></a>
+  </div>
 </div>

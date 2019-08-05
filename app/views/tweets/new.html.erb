@@ -13,7 +13,9 @@
 
   <div class="twt-content-new">
     <%= form_for @tweet do |form| %>
+
       <%= form.text_area :body , cols: '80', rows: '5', placeholder: "What's happening?"%><br />
+
       <div class="">
         <%= form.submit 'Tweet', class: 'twt-btn' %>
       </div>
